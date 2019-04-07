@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NQuotes;
 using System.Net;
 using System.IO;
@@ -53,6 +53,10 @@ namespace MetaQuotesSample
             this.messages = new List<Message>();
         }
 
+        /// <summary>
+        /// Main function, getting all new message 
+        /// </summary>
+        /// <returns></returns>
         public override int start()
         {
             try
@@ -123,6 +127,10 @@ namespace MetaQuotesSample
             return 0;
         }
 
+        /// <summary>
+        /// Get the type of message: new trade, close trade or modify trade
+        /// </summary>
+        /// <param name="txt"></param>
         void TypeOfMessage(string txt)
         {
             string[] arr = txt.Split(separator);
