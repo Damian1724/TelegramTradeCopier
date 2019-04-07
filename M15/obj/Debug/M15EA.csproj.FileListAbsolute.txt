@@ -1,0 +1,14 @@
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\M15.dll
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\M15.pdb
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\nquotes.dll
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\nquotes.xml
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\obj\Debug\M15EA.csprojAssemblyReference.cache
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\obj\Debug\M15EA.csproj.CoreCompileInputs.cache
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\obj\Debug\M15EA.csproj.CopyComplete
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\obj\Debug\M15.dll
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\obj\Debug\M15.pdb
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\IronOcr.dll
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\Newtonsoft.Json.dll
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\IronOcr.xml
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\Newtonsoft.Json.xml

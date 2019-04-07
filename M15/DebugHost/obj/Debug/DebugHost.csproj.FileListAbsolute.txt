@@ -1,0 +1,7 @@
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\DebugHost.exe
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\bin\Debug\DebugHost.pdb
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\DebugHost\obj\Debug\DebugHost.csprojAssemblyReference.cache
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\DebugHost\obj\Debug\DebugHost.csproj.CoreCompileInputs.cache
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\DebugHost\obj\Debug\DebugHost.csproj.CopyComplete
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\DebugHost\obj\Debug\DebugHost.exe
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\9D990316CA8990E1391C63EDC022B6A3\MQL4\Projects\nquotes\M15\DebugHost\obj\Debug\DebugHost.pdb
