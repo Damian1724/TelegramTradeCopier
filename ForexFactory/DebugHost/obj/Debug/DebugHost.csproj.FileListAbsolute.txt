@@ -1,0 +1,14 @@
+C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\2CCD312640AB11E1C3B6A12D6FF05319\MQL4\Projects\nquotes\MovingAverageCustom\bin\Debug\DebugHost.exe
+C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\2CCD312640AB11E1C3B6A12D6FF05319\MQL4\Projects\nquotes\MovingAverageCustom\bin\Debug\DebugHost.pdb
+C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\2CCD312640AB11E1C3B6A12D6FF05319\MQL4\Projects\nquotes\MovingAverageCustom\DebugHost\obj\Debug\DebugHost.csprojAssemblyReference.cache
+C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\2CCD312640AB11E1C3B6A12D6FF05319\MQL4\Projects\nquotes\MovingAverageCustom\DebugHost\obj\Debug\DebugHost.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\2CCD312640AB11E1C3B6A12D6FF05319\MQL4\Projects\nquotes\MovingAverageCustom\DebugHost\obj\Debug\DebugHost.csproj.CopyComplete
+C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\2CCD312640AB11E1C3B6A12D6FF05319\MQL4\Projects\nquotes\MovingAverageCustom\DebugHost\obj\Debug\DebugHost.exe
+C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal\2CCD312640AB11E1C3B6A12D6FF05319\MQL4\Projects\nquotes\MovingAverageCustom\DebugHost\obj\Debug\DebugHost.pdb
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\bin\Debug\DebugHost.exe
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\bin\Debug\DebugHost.pdb
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\DebugHost\obj\Debug\DebugHost.csprojAssemblyReference.cache
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\DebugHost\obj\Debug\DebugHost.csproj.CoreCompileInputs.cache
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\DebugHost\obj\Debug\DebugHost.csproj.CopyComplete
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\DebugHost\obj\Debug\DebugHost.exe
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\DebugHost\obj\Debug\DebugHost.pdb

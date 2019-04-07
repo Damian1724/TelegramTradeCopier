@@ -1,0 +1,12 @@
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\bin\Debug\ForexFactory.dll
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\bin\Debug\ForexFactory.pdb
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\bin\Debug\Newtonsoft.Json.dll
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\bin\Debug\nquotes.dll
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\bin\Debug\Newtonsoft.Json.xml
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\bin\Debug\nquotes.xml
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\obj\Debug\ForexFactoryEA.csproj.CoreCompileInputs.cache
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\obj\Debug\ForexFactoryEA.csproj.CopyComplete
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\obj\Debug\ForexFactory.dll
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\obj\Debug\ForexFactory.pdb
+C:\Users\damia\AppData\Roaming\MetaQuotes\Terminal\1A412C2C36FFC677775350A51CD9EA1B\MQL4\Projects\nquotes\ForexFactory\obj\Debug\ForexFactoryEA.csprojAssemblyReference.cache
