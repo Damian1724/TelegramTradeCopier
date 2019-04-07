@@ -128,7 +128,7 @@ namespace MetaQuotesSample
         }
 
         /// <summary>
-        /// Get the type of message: new trade, close trade or modify trade
+        /// Verify the type of message: new trade, close trade or modify trade
         /// </summary>
         /// <param name="txt"></param>
         void TypeOfMessage(string txt)
