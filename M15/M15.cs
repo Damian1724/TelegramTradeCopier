@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Color = System.Drawing.Color;
 using NQuotes;
 using System.Net;
@@ -22,10 +22,13 @@ namespace MetaQuotesSample
     {
 
         [ExternVariable]
-        public double lots = 0;
+        public double LOTS = 0;
 
         [ExternVariable]
-        public int message_id = 0;
+        public int MESSAGE_ID = 0;
+
+        [ExternVariable]
+        public int FORWARD_FROM_MESSAGE_ID = 0;
 
         readonly AutoOcr OCR = new AutoOcr() { ReadBarCodes = false };
         readonly System.DateTime expiration = new DateTime();
@@ -34,7 +37,7 @@ namespace MetaQuotesSample
         readonly string[] pair_array = { "GOLD", "AUDUSD", "EURUSD", "GBPUSD", "NZDUSD", "USDCAD", "USDCHF", "USDJPY", "EURCZK", "EURDKK", "EURHKD", "EURMXN", "EURNOK", "EURPLN", "EURSEK", "EURTRY", "EURZAR", "GBPDKK", "GBPNOK", "GBPSEK", "NOKSEK", "USDCNH", "USDCZK", "USDDKK", "USDHKD", "USDHUF", "USDILS", "USDMXN", "USDNOK", "USDPLN", "USDRUB", "USDSEK", "USDSGD", "USDTRY", "USDZAR", "AUDCAD", "AUDCHF", "AUDJPY", "AUDNZD", "CADCHF", "CADJPY", "CHFJPY", "EURAUD", "EURCAD", "EURCHF", "EURGBP", "EURJPY", "EURNZD", "GBPAUD", "GBPCAD", "GBPCHF", "GBPJPY", "GBPNZD", "NZDCAD", "NZDCHF", "NZDJPY", "COPPER", "XAGUSD", "XAUEUR", "XAUUSD", "XPDUSD", "XPTUSD", "NGAS", "UKOIL", "USOIL", "AUS200", "ESP35", "EUSTX50", "FRA40", "GER30", "HKG50", "JPN225", "NAS100", "SPX500", "UK100", "US30" };
         const string file_path = @"C:\\Users\\damia\\AppData\\Roaming\\MetaQuotes\\Terminal\\9D990316CA8990E1391C63EDC022B6A3\\MQL4\\Projects\\nquotes\\M15\\forwardFromMessageId.txt";
         List<int> ticket_list, replay_id_position;
-        List<double> forward_from_message_id, trade_position;
+        List<double> forward_from_message_id_list, trade_position;
         string pair,txt;
         int order_operation,photo_number;
         bool restart;
@@ -43,7 +46,7 @@ namespace MetaQuotesSample
         M15()
         {
             this.ticket_list = new List<int>();
-            this.forward_from_message_id = new List<double>();
+            this.forward_from_message_id_list = new List<double>();
             this.trade_position = new List<double>();
             this.replay_id_position = new List<int>();
             this.pair = "";
@@ -81,18 +84,19 @@ namespace MetaQuotesSample
                     for (int i = 0; i < this.messages.Count; i++)
                     {
                         bool reply = false;
-                        if (message_id < this.messages[i].message_id)
+
+                        if (MESSAGE_ID < this.messages[i].message_id && FORWARD_FROM_MESSAGE_ID < this.messages[i].forward_from_message_id)
                         {
-                            for (int j = 0; j < this.forward_from_message_id.Count; j++)
+                            for (int j = 0; j < this.forward_from_message_id_list.Count; j++)
                             {
-                                if (this.messages[i].forward_from_message_id == this.forward_from_message_id[j])
+                                if (this.messages[i].forward_from_message_id == this.forward_from_message_id_list[j])
                                 {
                                     reply = true;
                                     this.replay_id_position.Add(j);
                                 }
                             }
-                            reply = true;
-                            message_id = this.messages[i].message_id;
+
+                            MESSAGE_ID = this.messages[i].message_id;
                             if (this.messages[i].caption != null || this.messages[i].text != null && reply)
                             {
                                 if (!reply)
@@ -123,12 +127,12 @@ namespace MetaQuotesSample
 
                                     for (int j = 0; j < arr.Length - 1; j++)
                                     {
-                                        if (arr[j].ToLower() == "new" && arr[j + 1].ToLower() == "sl")
+                                        if (arr[j].ToLower() == "new" && arr[j + 1].ToLower() == "sl" && arr.Length < 8)
                                         {
                                             ModifyStopLoss();
                                         }
 
-                                        if (arr[j].ToLower() == "pips-" || arr[j].ToLower() == "pip-")
+                                        if (arr[j].ToLower() == "pips-" || arr[j].ToLower() == "pip-" || arr[j] == "00" && arr.Length < 8)
                                         {
                                             CloseTrade();
                                         }
@@ -173,11 +177,11 @@ namespace MetaQuotesSample
                 BuyPosition();
                 for (int i = 0; i < 3; i++)
                 {
-                    n = OrderSend(this.pair, OP_BUY, lots * lots_percent[i], Ask, 100, this.trade_position[4], this.trade_position[i + 1]);
+                    n = OrderSend(this.pair, OP_BUY, LOTS * lots_percent[i], Ask, 100, this.trade_position[4], this.trade_position[i + 1]);
                     if (n > 0)
                     {
                         this.ticket_list.Add(n);
-                        this.forward_from_message_id.Add(id);
+                        this.forward_from_message_id_list.Add(id);
                     }
                 }
             }
@@ -187,11 +191,11 @@ namespace MetaQuotesSample
                 SellPosition();
                 for (int i = 0; i < 3; i++)
                 { 
-                    n = OrderSend(this.pair, OP_SELL, lots * lots_percent[i], Ask, 100, this.trade_position[4], this.trade_position[i + 1]);
+                    n = OrderSend(this.pair, OP_SELL, LOTS * lots_percent[i], Ask, 100, this.trade_position[4], this.trade_position[i + 1]);
                     if (n > 0)
                     {
                         this.ticket_list.Add(n);
-                        this.forward_from_message_id.Add(id);
+                        this.forward_from_message_id_list.Add(id);
                     }
                 }
             }
@@ -349,7 +353,7 @@ namespace MetaQuotesSample
         {
             int pos = this.ticket_list.IndexOf(order);
             this.ticket_list.Remove(order);
-            this.forward_from_message_id.RemoveAt(pos);
+            this.forward_from_message_id_list.RemoveAt(pos);
             WriteTxt();
             OrderSelect(order, SELECT_BY_TICKET);
             this.pair = OrderSymbol();
@@ -410,8 +414,8 @@ namespace MetaQuotesSample
         void WriteTxt()
         {
             List<string> lines = new List<string>();
-            for (int i = 0; i < this.forward_from_message_id.Count; i++)
-                lines.Add(this.forward_from_message_id[i].ToString());
+            for (int i = 0; i < this.forward_from_message_id_list.Count; i++)
+                lines.Add(this.forward_from_message_id_list[i].ToString());
 
             File.WriteAllLines(file_path, lines);
         }
@@ -423,7 +427,7 @@ namespace MetaQuotesSample
         {
             List<string> lines = File.ReadAllLines(file_path).ToList();
             for (int i = 0; i < lines.Count; i++)
-                this.forward_from_message_id.Add(double.Parse(lines[i]));
+                this.forward_from_message_id_list.Add(double.Parse(lines[i]));
 
         }
 
