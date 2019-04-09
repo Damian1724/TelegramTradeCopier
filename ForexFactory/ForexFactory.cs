@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NQuotes;
 using System.Net;
 using System.IO;
@@ -9,7 +9,7 @@ using System.Threading;
 using System.Linq;
 using Newtonsoft.Json;
 
-
+//
 
 namespace MetaQuotesSample
 {
