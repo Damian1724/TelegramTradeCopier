@@ -70,7 +70,7 @@ namespace MetaQuotesSample
                     }
 
                     AddTicketNumber();
-                    string responseString = client.DownloadString("https://api.telegram.org/bot785759223:AAEcNhHrPxYskPmsmmfrvJgtX4MTgp16loQ/getUpdates");
+                    string responseString = client.DownloadString("TelegramAPI");
                     JObject json = JObject.Parse(responseString);
 
                     for (int i = 0; i < ((JArray)json["result"]).Count; i++)
@@ -729,8 +729,8 @@ namespace MetaQuotesSample
             string chatId = "";
             string urlString = "https://api.telegram.org/bot{0}/sendMessage?chat_id={1}&text={2}";
 
-            apiToken = "714493268:AAEIGn-fxh8L_yrEtryy0G2yvXaOOPDDTWU";
-            chatId = "474653809";
+            apiToken = "API_TOKEN";
+            chatId = "CHAT_ID";
 
             txt += " Forex Factory Paid Group";
 
