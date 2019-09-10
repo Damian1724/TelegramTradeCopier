@@ -35,7 +35,7 @@ namespace MetaQuotesSample
         readonly char[] separator = { ' ', '\n' };
         readonly double[] lots_percent = { 0.70, 0.20, 0.10 };
         readonly string[] pair_array = { "GOLD", "AUDUSD", "EURUSD", "GBPUSD", "NZDUSD", "USDCAD", "USDCHF", "USDJPY", "EURCZK", "EURDKK", "EURHKD", "EURMXN", "EURNOK", "EURPLN", "EURSEK", "EURTRY", "EURZAR", "GBPDKK", "GBPNOK", "GBPSEK", "NOKSEK", "USDCNH", "USDCZK", "USDDKK", "USDHKD", "USDHUF", "USDILS", "USDMXN", "USDNOK", "USDPLN", "USDRUB", "USDSEK", "USDSGD", "USDTRY", "USDZAR", "AUDCAD", "AUDCHF", "AUDJPY", "AUDNZD", "CADCHF", "CADJPY", "CHFJPY", "EURAUD", "EURCAD", "EURCHF", "EURGBP", "EURJPY", "EURNZD", "GBPAUD", "GBPCAD", "GBPCHF", "GBPJPY", "GBPNZD", "NZDCAD", "NZDCHF", "NZDJPY", "COPPER", "XAGUSD", "XAUEUR", "XAUUSD", "XPDUSD", "XPTUSD", "NGAS", "UKOIL", "USOIL", "AUS200", "ESP35", "EUSTX50", "FRA40", "GER30", "HKG50", "JPN225", "NAS100", "SPX500", "UK100", "US30" };
-        const string file_path = @"C:\\Users\\damia\\AppData\\Roaming\\MetaQuotes\\Terminal\\9D990316CA8990E1391C63EDC022B6A3\\MQL4\\Projects\\nquotes\\M15\\forwardFromMessageId.txt";
+        const string file_path = @"PATH_TO_A_FOLDER";
         List<int> ticket_list, replay_id_position;
         List<double> forward_from_message_id_list, trade_position;
         string pair,txt;
@@ -75,7 +75,7 @@ namespace MetaQuotesSample
                     }
 
                     AddTicketNumber();
-                    string responseString = client.DownloadString("https://api.telegram.org/bot690429248:AAHbW1LajpqyLmn_m5qCV4UtjpBKzXNhPoc/getupdates");
+                    string responseString = client.DownloadString("TELEGRAM_API");
                     JObject json = JObject.Parse(responseString);
 
                     for (int i = 0; i < ((JArray)json["result"]).Count; i++)
@@ -109,10 +109,10 @@ namespace MetaQuotesSample
                                         if (arr[j].ToLower() == "sell" || arr[j].ToLower() == "buy")
                                         {
                                             string file_id = json["result"][i]["message"]["photo"][0]["file_id"].ToString();
-                                            responseString = client.DownloadString("https://api.telegram.org/bot690429248:AAHbW1LajpqyLmn_m5qCV4UtjpBKzXNhPoc/getFile?file_id=" + file_id);
+                                            responseString = client.DownloadString("TELEGRAM_API" + file_id);
                                             var json2 = JObject.Parse(responseString);
                                             string file_path = json2["result"]["file_path"].ToString();
-                                            client.DownloadFile("https://api.telegram.org/file/bot690429248:AAHbW1LajpqyLmn_m5qCV4UtjpBKzXNhPoc/" + file_path, @"C:\Users\damia\Desktop\Newfolder\Picture" + this.photo_number.ToString() + ".jpg");
+                                            client.DownloadFile("TELEGRAM_API/" + file_path, @"PATH_TO_FOLDER" + this.photo_number.ToString() + ".jpg");
                                             ExecuteTrade(arr, this.messages[i].forward_from_message_id);
                                             this.photo_number++;
                                             break;
@@ -376,7 +376,7 @@ namespace MetaQuotesSample
         /// </summary>
         void DeletePictures()
         {
-            string[] filePaths = Directory.GetFiles(@"C:\Users\damia\Desktop\Newfolder\");
+            string[] filePaths = Directory.GetFiles(@"PATH_TO_FOLDER");
             foreach (string filePath in filePaths)
             {
                 try
@@ -441,8 +441,8 @@ namespace MetaQuotesSample
             string chatId = "";
             string urlString = "https://api.telegram.org/bot{0}/sendMessage?chat_id={1}&text={2}";
 
-            apiToken = "714493268:AAEIGn-fxh8L_yrEtryy0G2yvXaOOPDDTWU";
-            chatId = "474653809";
+            apiToken = "API_TOKEN;
+            chatId = "CHAT_ID";
 
             text += " M15 VIP GROUP";
 
